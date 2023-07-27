@@ -1,4 +1,9 @@
 import { createGlobalStyle } from "styled-components";
+import { Satisfy } from "next/font/google";
+import { Open_Sans } from "next/font/google";
+
+const satisfy = Satisfy({ subsets: ["latin"], weight: "400" });
+const opensans = Open_Sans({ subsets: ["latin"] });
 
 export default createGlobalStyle`
   *, 
@@ -15,7 +20,7 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: system-ui;
+    font-family: ${satisfy.style.fontFamily};
     padding: 2rem;
   }
 `;
